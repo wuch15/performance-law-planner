@@ -13,10 +13,11 @@ Note: We set the number of KV heads to 8 and the size of vocabulary to 150K.
 
 ## Reference
 If you find this plan generator helpful for your LLM development, please feel free to cite this paper:
-
+```
 @article{wu2024performance,
   title={Performance Law of Large Language Models},
   author={Wu, Chuhan and Tang, Ruiming},
   journal={arXiv preprint arXiv:2408.09895},
   year={2024}
 }
+```
