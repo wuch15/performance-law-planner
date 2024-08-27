@@ -17,12 +17,13 @@ def code_runner():
     min_mmlu =  float(mmlu_textbox.get("1.0", "end-1c"))
     max_size = float(size_textbox.get("1.0", "end-1c"))
     mim_size = float(sizem_textbox.get("1.0", "end-1c")) 
+    max_token = float(token_textbox.get("1.0", "end-1c"))
     for ffn_s in np.arange(0,100,2):
         progress_var.set(ffn_s+2) 
         root.update()
         for c1,hidden in enumerate(np.arange(16384,1024,-1024)):
             for c2,n_layer in enumerate(np.arange(min_layer,max_layer)):
-                for token_T in np.arange(1,15,0.5):
+                for token_T in np.arange(1,max_token,0.5):
 
                     hidden = float(hidden)
                     ffn = hidden + 1024 * ffn_s
